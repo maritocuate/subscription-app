@@ -10,9 +10,11 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1 className="text-3xl font-bold">Subscription App</h1>
-      {isAuthenticated ? <p>Authenticated</p> : <p>Not Authenticated</p>}
-      <LoginLink>Login</LoginLink>
-      <LogoutLink>Logout</LogoutLink>
+      {isAuthenticated ? (
+        <LogoutLink>Logout</LogoutLink>
+      ) : (
+        <LoginLink>Login</LoginLink>
+      )}
     </main>
   )
 }
